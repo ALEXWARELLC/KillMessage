@@ -2,15 +2,14 @@
 using Exiled.API.Features;
 using Exiled.API.Interfaces;
 using Exiled.Events.EventArgs.Player;
-using Exiled.Events.Features;
 
 namespace KillMessage
 {
     public class Plugin : Plugin<Config>
     {
-        public override string Name => "KillMessages";
+        public override string Name => "KillMSG";
         public override string Author => "Cypher The Protogen & TylerTheSCPGuy";
-        public override string Prefix => "killmessages";
+        public override string Prefix => "killmsg";
         public override Version Version => new Version(0, 0, 1);
         public override PluginPriority Priority => PluginPriority.High;
 
