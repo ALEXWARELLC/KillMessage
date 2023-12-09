@@ -7,7 +7,7 @@ namespace KillMessage.Features
         public static void LogToAdminChat(string Message)
         {
             Log.Warn($"Sending message to AdminChat: '{Message}'");
-            RemoteAdmin.CommandProcessor.ProcessAdminChat(Message, null);
+            ReferenceHub.HostHub.encryptedChannelManager.TrySendMessageToClient($"0!{Message}", EncryptedChannelManager.EncryptedChannel.AdminChat);
         }
     }
 }
