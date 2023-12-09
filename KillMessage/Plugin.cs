@@ -2,7 +2,6 @@
 using Exiled.API.Features;
 using Exiled.API.Interfaces;
 using Exiled.Events.EventArgs.Player;
-using KillMessage.Validation;
 
 namespace KillMessage
 {
@@ -11,7 +10,7 @@ namespace KillMessage
         public override string Name => "KillMSG";
         public override string Author => "Cypher The Protogen & TylerTheSCPGuy";
         public override string Prefix => "killmsg";
-        public override Version Version => new Version(0, 0, 1);
+        public override Version Version => new Version(1, 0, 1);
         public override PluginPriority Priority => PluginPriority.High;
 
         public override void OnEnabled() => Initialize();
@@ -28,11 +27,8 @@ namespace KillMessage
         {
             if (args.Attacker != null)
             {
-                if (!new KOSDetection(Config).IsPlayerKOS(args.Player, args.Attacker))
-                {
-                    args.Attacker.ShowHint(new Hint($"You killed <color={Config.HighlightColor}>{args.Player.Nickname}</color>"));
-                    args.Player.ShowHint(new Hint($"You were killed by <color={Config.HighlightColor}>{args.Attacker.Nickname}</color>"));
-                }
+                args.Attacker.ShowHint(new Hint($"You killed <color={Config.HighlightColor}>{args.Player.Nickname}</color>"));
+                args.Player.ShowHint(new Hint($"You were killed by <color={Config.HighlightColor}>{args.Attacker.Nickname}</color>"));
             }
             else
             {
@@ -50,8 +46,5 @@ namespace KillMessage
 
         // Welcome Art
         public bool ShowWelcomeArt { get; set; } = true;
-
-        // KOS Detection
-        public bool AlertPlayerOfKOS { get; set; } = true;
     }
 }
