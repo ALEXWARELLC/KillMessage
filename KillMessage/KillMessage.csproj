@@ -10,13 +10,4 @@
   <ItemGroup>
     <PackageReference Include="EXILED" Version="8.4.2" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Mirror">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed\Mirror.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-  </ItemGroup>
 </Project>

@@ -8,7 +8,7 @@ namespace KillMessage
     public class Plugin : Plugin<Config>
     {
         public override string Name => "KillMSG";
-        public override string Author => "Cypher The Protogen & TylerTheSCPGuy";
+        public override string Author => "Cypher The Protogen & TylerTheScpGuy";
         public override string Prefix => "killmsg";
         public override Version Version => new Version(1, 0, 1);
         public override PluginPriority Priority => PluginPriority.High;
