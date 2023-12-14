@@ -43,4 +43,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Build Results
-        path: bin/Release/net48
+        path: bin/Release/net4.8/
